@@ -1,0 +1,58 @@
+io:
+  cloudapp:
+    datasource:
+      druid:
+#        refreshable: false
+        max-refresh-wait-seconds: 10
+        refreshEnabled: false
+
+server:
+  port: 18080
+
+spring:
+  datasource:
+    url: ${url}
+    username: ${username}
+    password: ${password}
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      initial-size: 2
+      max-active: 30
+      min-idle: 2
+      max-wait: 1000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 5
+      validation-query: select 1
+      validation-query-timeout: 1
+      test-on-borrow: true
+      test-on-return: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 10000
+      min-evictable-idle-time-millis: 30001
+      async-close-connection-enable: true
+      aop-patterns: com.alibaba.druid.spring.boot.demo.service.*
+      filter:
+        stat:
+          db-type: mysql
+          log-slow-sql: true
+          slow-sql-millis: 2000
+          enabled: true
+      stat-view-servlet:
+        enabled: true
+      web-stat-filter:
+        enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  application:
+    name: druid-demo
+  config:
+    import: nacos:druid-demo.yaml?refresh=true
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+        group: DEFAULT_GROUP

@@ -1,0 +1,46 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: seata-native-jpat-demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jpat_test?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF8
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-circular-references: true
+
+io:
+  cloudapp:
+    observabilities:
+      ot:
+        enabled: true
+        metric-endpoint: ${endpoint}
+
+seata:
+  enabled: true
+  tx-service-group: default_tx_group
+  config:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      namespace: ""
+      group: SEATA_GROUP
+      username: nacos
+      password: nacos
+      data-id: seata-client.properties
+  registry:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      namespace: ""
+      group : SEATA_GROUP
+      username: nacos
+      password: nacos

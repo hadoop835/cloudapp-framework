@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: OssSitApplication
+
+io:
+  cloudapp:
+    filestore:
+      aliyun:
+        enabled: true
+        accessKey: ${AK}
+        secretKey: ${SK}
+        endpoint: oss-cn-shenzhen.aliyuncs.com

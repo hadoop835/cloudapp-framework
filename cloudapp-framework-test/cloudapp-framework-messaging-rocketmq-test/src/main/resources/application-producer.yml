@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: ProducerDemo
+
+io:
+  cloudapp:
+    messaging:
+      rocketmq:
+        enabled: true
+        nameServer: ${ROCKET_HOST}
+        username: ${ROCKET_USERNAME}
+        password: ${ROCKET_PASSWORD}
+        useTLS: true
+        #        enableMsgTrace:
+        #        traceTopic:
+        outputs:
+          - name: rocketProducer
+            #            messageModel: CLUSTERING
+            group: test-group
+            #            enbleMsgTrace:
+            #            namespace:
+            sendTimeout: 15000
+          #            instanceName:
+          #            retryNextServer:
+          #            compressMsgBodyOverHowMuch:
+          #            maxMessageSize:
+          #            retryTimesWhenSendFailed:
+          #            isDefault: true
+          - name: rocketProducer2
+            group: test-group2
+            sendTimeout: 15000
+
+

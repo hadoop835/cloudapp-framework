@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: demo
+  redis:
+    host: ${redis_host}
+    jedis:
+      pool:
+        enabled: true
+        max-active: 8
+        test-on-borrow: true

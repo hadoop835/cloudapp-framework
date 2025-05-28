@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.cloudapp</groupId>
+        <artifactId>cloudapp-framework</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>cloudapp-framework-test</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>cloudapp-framework-config-test</module>
+        <module>cloudapp-framework-druid-test</module>
+        <module>cloudapp-framework-elasticsearch-test</module>
+        <module>cloudapp-framework-filestore-aliyun-test</module>
+        <module>cloudapp-framework-filestore-minio-test</module>
+        <module>cloudapp-framework-mail-test</module>
+        <module>cloudapp-framework-messaging-kafka-test</module>
+        <module>cloudapp-framework-messaging-rocketmq-test</module>
+        <module>cloudapp-framework-redis-test</module>
+        <module>cloudapp-framework-scheduler-schedulerx2-server-test</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>skip-sit</id>
+            <properties>
+                <maven.test.skip>true</maven.test.skip>
+            </properties>
+        </profile>
+    </profiles>
+
+
+</project>

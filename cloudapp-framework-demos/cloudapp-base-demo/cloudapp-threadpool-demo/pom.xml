@@ -1,0 +1,46 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.cloudapp</groupId>
+        <artifactId>cloudapp-base-demo</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>cloudapp-threadpool-demo</artifactId>
+    <version>${revision}</version>
+    <packaging>jar</packaging>
+
+    <name>cloudapp-threadpool-demo</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.cloudapp</groupId>
+            <artifactId>spring-boot-starter-cloudapp</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cloudapp</groupId>
+            <artifactId>cloudapp-base-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

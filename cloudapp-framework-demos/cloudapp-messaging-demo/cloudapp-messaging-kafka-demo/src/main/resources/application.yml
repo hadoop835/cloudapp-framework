@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: KafkaDemo
+#  config:
+#    import: nacos:KafkaDemo.yaml?refresh=true
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: 127.0.0.1:8848
+
+server:
+  port: 18099
+
+io:
+  cloudapp:
+    messaging:
+      kafka:
+        servers: ${KAFKA_SERVER}
+        username: ${KAFKA_USERNAME}
+        password: ${KAFKA_PASSWORD}
+        mechanism: PLAIN
+        security-protocol: SASL_SSL
+        #        identificationAlgorithm: ""
+        ssl:
+          trust-store-location: classpath:/sasl/mix.4096.client.truststore.jks
+        #          trust-store-password: KafkaOnsClient
+        inputs:
+          - name: testKafkaConsumer
+            topic: test-topic
+            group: test-group
+#            max-fetch-bytes: 32000
+#            session-timeout: 30000
+        #          trust-store-password: KafkaOnsClient
+        outputs:
+          - name: testKafkaProducer
+            group: test-group
+            topic: test-topic
+            properties:
+              "allow.auto.create.topics": false

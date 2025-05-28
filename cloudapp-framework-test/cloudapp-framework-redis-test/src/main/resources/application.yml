@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: redis-demo
+
+io:
+  cloudapp:
+    redis:
+      enabled: true
+      host: ${REDIS_HOST}
+      username: ${REDIS_USERNAME}
+      password: ${REDIS_PASSWORD}
+      port: 6379
+      hashMonitoring: false
+      valueMonitoring: false
+      keyEncrypt: false
+      usedHash: false
+      clientType: LETTUCE
+#      clientType: JEDIS

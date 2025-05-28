@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.18</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>io.cloudapp</groupId>
+    <artifactId>cloudapp-framework-demos</artifactId>
+    <version>${revision}</version>
+
+    <packaging>pom</packaging>
+    <name>cloudapp-framework-demos</name>
+    <description>cloudapp-framework-demos</description>
+
+    <properties>
+        <revision>1.0.3-SNAPSHOT</revision>
+
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.compilerVersion>8</maven.compiler.compilerVersion>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <maven.source.skip>true</maven.source.skip>
+    </properties>
+
+    <modules>
+        <module>cloudapp-apigateway-demo</module>
+        <module>cloudapp-base-demo</module>
+        <module>cloudapp-config-demo</module>
+        <module>cloudapp-filestore-demo</module>
+        <module>cloudapp-messaging-demo</module>
+        <module>cloudapp-microservice-demo</module>
+        <module>cloudapp-oauth2-demo</module>
+        <module>cloudapp-observabilities-demo</module>
+        <module>cloudapp-redis-demo</module>
+        <module>cloudapp-search-demo</module>
+        <module>cloudapp-sequence-demo</module>
+        <module>cloudapp-scheduler-demo</module>
+        <module>cloudapp-base-utils-demo</module>
+        <module>cloudapp-seata-demo</module>
+        <module>cloudapp-datasource-druid-demo</module>
+        <module>cloudapp-datasource-druid-observable-demo</module>
+        <module>cloudapp-mail-demo</module>
+        <module>cloudapp-aliee-demo</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten-clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

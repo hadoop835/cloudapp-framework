@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-cloud-provider
+  config:
+    import: nacos:${spring.application.name}.yaml
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        import-check:
+          enabled:
+        enabled: true
+
+server:
+  port: 20002
+
+alicloud:
+  deployment:
+    mode: EDAS_MANAGED

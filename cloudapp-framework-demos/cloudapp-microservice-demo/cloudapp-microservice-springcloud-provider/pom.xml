@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.cloudapp</groupId>
+        <artifactId>cloudapp-microservice-demo</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>cloudapp-microservice-springcloud-provider</artifactId>
+    <name>cloudapp-microservice-springcloud-provider</name>
+    <description>cloudapp-microservice-springcloud-provider</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.cloudapp</groupId>
+            <artifactId>spring-boot-starter-cloudapp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.cloudapp.microservice</groupId>
+            <artifactId>cloudapp-microservice-springcloud-aliyun</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-spring-context</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
+

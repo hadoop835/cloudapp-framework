@@ -1,0 +1,23 @@
+io:
+  cloudapp:
+    filestore:
+      aliyun:
+        enabled: true
+        access-key: ${AK}
+        secret-key: ${SK}
+        endpoint: http://oss-cn-shenzhen.aliyuncs.com
+
+spring:
+  application:
+    name: oss-autorefresh-demo
+  config:
+    import: nacos:oss-autorefresh-demo.yaml?refresh=true
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+        group: DEFAULT_GROUP
+server:
+  port: 8080

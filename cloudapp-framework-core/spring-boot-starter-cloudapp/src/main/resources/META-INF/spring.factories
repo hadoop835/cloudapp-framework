@@ -1,0 +1,37 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.cloudapp.starter.base.configuration.BaseAutoConfiguration,\
+io.cloudapp.starter.base.configuration.MonitoringThreadPoolConfiguration,\
+io.cloudapp.starter.sequence.configuration.SnowflakeSequenceAutoConfiguration,\
+io.cloudapp.starter.sequence.configuration.RedisSequenceAutoConfiguration,\
+io.cloudapp.starter.filestore.configuration.AliyunFileStoreConfiguration,\
+io.cloudapp.starter.filestore.configuration.MinioFileStoreConfiguration,\
+io.cloudapp.starter.apigateway.configuration.ApiGatewayConfiguration,\
+io.cloudapp.starter.messaging.configuration.CloudAppRocketConfiguration,\
+io.cloudapp.starter.messaging.configuration.CloudAppKafkaConfiguration,\
+io.cloudapp.starter.search.configuration.ElasticsearchConfiguration,\
+io.cloudapp.starter.redis.configuration.CloudAppRedisConfiguration,\
+io.cloudapp.starter.config.configuration.NacosConfigReadServiceAutoConfiguration,\
+io.cloudapp.starter.config.configuration.AliyunConfigManagerAutoConfiguration,\
+io.cloudapp.starter.microservice.configuration.AliyunMicroServiceConfiguration,\
+io.cloudapp.starter.oauth2.configuration.OAuth2AutoConfiguration, \
+io.cloudapp.starter.datasource.configurations.RefreshableDruidDataSourceAutoConfigure, \
+io.cloudapp.starter.oauth2.configuration.OAuth2AutoConfiguration,\
+io.cloudapp.starter.observabilities.configurations.OpenTelemetryMetricConfiguration,\
+io.cloudapp.starter.seata.configuration.CloudAppSeataAutoConfiguration,\
+io.cloudapp.starter.seata.configuration.CloudAppSagaAutoConfiguration,\
+io.cloudapp.starter.seata.configuration.SeataObservableConfiguration,\
+io.cloudapp.starter.scheduler.configuration.SchedulerX2ServerConfiguration,\
+io.cloudapp.starter.scheduler.configuration.SchedulerX2WorkerConfiguration,\
+io.cloudapp.starter.observabilities.configurations.OpenTelemetryTraceConfiguration,\
+io.cloudapp.starter.observabilities.configurations.OpenTelemetryLog4J2AutoConfiguration,\
+io.cloudapp.starter.mail.configuration.CloudAppMailAutoConfiguration
+
+org.springframework.context.ApplicationContextInitializer=\
+io.cloudapp.starter.mail.configuration.MailApplicationInitializer
+
+
+org.springframework.context.ApplicationListener=\
+    io.cloudapp.starter.base.CloudAppContextInitialized
+
+org.springframework.boot.env.EnvironmentPostProcessor=\
+io.cloudapp.starter.observabilities.configurations.OpenTelemetryLoggingPostProcessor

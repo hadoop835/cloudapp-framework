@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ConsumerDemo
+
+io:
+  cloudapp:
+    messaging:
+      rocketmq:
+        enabled: true
+        nameServer: ${ROCKET_HOST}
+        username: ${ROCKET_USERNAME}
+        password: ${ROCKET_PASSWORD}
+        useTLS: false
+        enableMsgTrace: false
+        #        traceTopic:
+        inputs:
+          - group: test-group
+            #            accessChannel: LOCAL
+            #            messageModel: CLUSTERING
+            #            pullBatchSize:
+            #            namespace:
+            name: rocketConsumer
+            topic: test-topic
+#            tags:
+

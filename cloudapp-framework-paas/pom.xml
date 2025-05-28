@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.cloudapp</groupId>
+        <artifactId>cloudapp-framework</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>cloudapp-framework-paas</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>cloudapp-spring-messaging</module>
+        <module>cloudapp-spring-config</module>
+        <module>cloudapp-spring-apigateway</module>
+        <module>cloudapp-spring-search</module>
+        <module>cloudapp-spring-filestore</module>
+        <module>cloudapp-spring-scheduler</module>
+        <module>cloudapp-spring-redis</module>
+        <module>cloudapp-starter-aliee</module>
+    </modules>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>io.cloudapp</groupId>
+            <artifactId>cloudapp-base-api</artifactId>
+        </dependency>
+    </dependencies>
+</project>

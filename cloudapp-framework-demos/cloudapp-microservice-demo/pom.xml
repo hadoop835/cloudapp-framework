@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.cloudapp</groupId>
+        <artifactId>cloudapp-framework-demos</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+    </parent>
+
+    <artifactId>cloudapp-microservice-demo</artifactId>
+    <version>${revision}</version>
+
+    <packaging>pom</packaging>
+    <name>cloudapp-microservice-demo</name>
+    <description>cloudapp-microservice-demo</description>
+    <modules>
+        <module>cloudapp-microservice-dubbo-demo</module>
+        <module>cloudapp-microservice-springcloud-demo</module>
+        <module>cloudapp-microservice-springcloud-consumer</module>
+        <module>cloudapp-microservice-springcloud-provider</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.cloudapp</groupId>
+                <artifactId>cloudapp-framework-dependencies</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

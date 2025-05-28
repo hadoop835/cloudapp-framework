@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: config-aliyun-demo
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        import-check:
+          enabled: false
+
+io:
+  cloudapp:
+    config:
+      aliyun:
+        read:
+          enabled: true
+          timeout: 5000
+          group: cloudapp
+        write:
+          enabled: true
+          timeout: 5000
+          group: cloudapp
+          regionId: cn-hangzhou
+          namespaceId: 3a05b6c2-4f93-474d-9856-6e7b75d20296
+          domain: acm.cn-hangzhou.aliyuncs.com
+          accesskey: ${AK}
+          secretKey: ${SK}

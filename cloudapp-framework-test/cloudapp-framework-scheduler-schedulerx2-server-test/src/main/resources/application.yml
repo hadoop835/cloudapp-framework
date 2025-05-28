@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: schedulerx2-demo
+
+io:
+  cloudapp:
+    scheduler:
+      schedulerx2-server:
+        enabled: true
+        #        endpoint reference： https://help.aliyun.com/zh/schedulerx/schedulerx-serverless/developer-reference/api-schedulerx2-2019-04-30-endpoint?spm=a2c4g.11186623.0.0.626d313f2QVhID
+        endpoint: ${ENDPOINT}
+        #        AK
+        access-key-id: ${AK}
+        #        SK
+        access-key-secret: ${SK}
+        #        region-id reference： https://help.aliyun.com/zh/schedulerx/schedulerx-serverless/developer-reference/api-schedulerx2-2019-04-30-endpoint?spm=a2c4g.11186623.0.0.626d313f2QVhID
+        region-id: ${REGION}

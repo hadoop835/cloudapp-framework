@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ConsumerDemo
+
+io:
+  cloudapp:
+    messaging:
+      kafka:
+        servers: ${KAFKA_SERVER}
+        username: ${KAFKA_USERNAME}
+        password: ${KAFKA_PASSWORD}
+        mechanism: PLAIN
+        security-protocol: SASL_SSL
+        #        identificationAlgorithm: ""
+        ssl:
+          trust-store-location: classpath:/sasl/mix.4096.client.truststore.jks
+          trust-store-password: KafkaOnsClient
+        inputs:
+          - name: kafkaConsumer
+            topic: test-topic
+            group: test-group
+            max-fetch-bytes: 32000
+            session-timeout: 30000

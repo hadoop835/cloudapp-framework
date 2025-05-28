@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: tcc-demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${host}:3306/tcc_test?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF8
+    username: ${username}
+    password: ${password}
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  main:
+    allow-circular-references: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+io:
+  cloudapp:
+    seata:
+      enabled: true
+      application-id: ${spring.application.name}
+      tx-service-group: ${spring.application.name}-tx-group
+      dataSourceProxyMode: TCC
+
+
+    observabilities:
+      ot:
+        enabled: true
+        metric-endpoint: ${endpoint}

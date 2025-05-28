@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: cloudapp-demo     # ServiceMonitor名称
+  namespace: default   # ServiceMonitor的namespace=
+  annotations:
+    arms.prometheus.io/discovery: 'true'
+spec:
+  selector:
+    matchLabels:
+      edas-app:  cloudapp-demo # 匹配service的标签
+  namespaceSelector:
+    any: true
+  endpoints:
+    - interval: 15s         # 采集间隔时间
+      path: /metrics        # 指标路径，不填默认是 /metrics
+      scheme: http          # 协议，可不填默认是http
+      scrapeTimeout: 10s    # 采集超时时间
+      port: http-9464       # Service 中定义的要采集的端口名称
+      targetPort: http-9464 # Deployment 中定义的要采集的端口名称，当port和targetPort同时存在时，优先使用port
+

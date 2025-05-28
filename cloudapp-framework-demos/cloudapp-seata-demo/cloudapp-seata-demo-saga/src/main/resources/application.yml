@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: seata-demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${host}:3306/saga_test?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF8
+    username: ${username}
+    password: ${password}
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  main:
+    allow-circular-references: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+io:
+  cloudapp:
+    seata:
+      enabled: true
+      application-id: ${spring.application.name}
+      tx-service-group: ${spring.application.name}-tx-group
+      dataSourceProxyMode: SAGA
+      saga:
+        enabled: true
+        state-machine:
+          async-thread-pool:
+            core-pool-size: 10
+            max-pool-size: 20
+            keep-alive-time: 60
+          enable-async: true
+          auto-register-resources: true
+          charset: UTF-8
+          trans-operation-timeout: 1800000
+          resources: classpath:seata/statelang/statelang/*.json
+          #table-prefix: saga_
+          #default-tenant-id: 1
+          service-invoke-timeout: 300000
+
+    observabilities:
+      ot:
+        enabled: true
+        metric-endpoint: ${endpoint}
+
+

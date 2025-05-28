@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: cloudapp-observabilites-opentelemetry-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        import-check:
+          enabled: false
+
+server:
+  port: 20001
+
+
+io:
+  cloudapp:
+    observabilities:
+      ot:
+        # enable metric enhance feature
+        enabled: true
+        # enable metric helper server
+        enabled-helper-server: true
+        # set helper server binding address
+        helper-server-bind-address: 0.0.0.0
+        # set helper server binding port
+        helper-server-port: 20002
+        prometheus-exporter: true
+        metric-endpoint: http://tracing-analysis-dc-hz-internal.aliyuncs.com/xxxxxx/api/otlp/metrics
+        logging:
+          enable-traceid: true

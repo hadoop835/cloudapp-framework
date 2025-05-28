@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.cloudapp</groupId>
+        <artifactId>cloudapp-framework-demos</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+    </parent>
+
+    <artifactId>cloudapp-oauth2-demo</artifactId>
+    <version>${revision}</version>
+
+    <packaging>jar</packaging>
+    <name>cloudapp-oauth2-demo</name>
+    <description>cloudapp-oauth2-demo</description>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.cloudapp</groupId>
+                <artifactId>cloudapp-framework-dependencies</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cloudapp</groupId>
+            <artifactId>spring-boot-starter-cloudapp</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cloudapp</groupId>
+            <artifactId>cloudapp-spring-oauth2</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

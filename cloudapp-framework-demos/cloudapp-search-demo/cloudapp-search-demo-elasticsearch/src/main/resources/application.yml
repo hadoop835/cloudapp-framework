@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: elasticsearch-demo
+
+io:
+  cloudapp:
+    search:
+      elasticsearch:
+        enabled: true
+        host: ${ES_HOST}
+        username: ${ES_USERNAME}
+        password: ${ES_PASSWORD}
+

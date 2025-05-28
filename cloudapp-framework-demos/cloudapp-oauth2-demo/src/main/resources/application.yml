@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+io:
+  cloudapp:
+    oauth2:
+      enabled: true
+      client-id: ${clientId}
+      client-secret: ${clientSecret}
+      redirect-uri: http://localhost:8080/oauth/code
+      scopes:
+      - openid
+      - profile
+      grant-types:
+        - authorization_code
+        - refresh_token
+      authorization-uri: https://gitlab.com/oauth/authorize
+      token-uri: https://gitlab.com/oauth/token
+      jwks-url: https://gitlab.com/oauth/discovery/keys

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: demo
+
+io:
+  cloudapp:
+    sequence:
+      redis:
+        enabled: true
+        host: ${REDIS_HOST}

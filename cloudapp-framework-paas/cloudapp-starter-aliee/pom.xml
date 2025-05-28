@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.cloudapp</groupId>
+        <artifactId>cloudapp-framework-paas</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>cloudapp-starter-aliee</artifactId>
+    <version>${revision}</version>
+
+    <properties>
+        <!--
+        Local set AliEE dependencies and properties as those libraries
+        are not available in Maven Central.
+        -->
+        <aliee.version>2.7.18.1</aliee.version>
+        <aliee.jsp.version>1.1.2</aliee.jsp.version>
+        <aliee.jdbc.version>1.1.2</aliee.jdbc.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--    AliEE    -->
+        <dependency>
+            <groupId>com.alibaba.ee</groupId>
+            <artifactId>web-boot-starter</artifactId>
+            <version>${aliee.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.ee.embed</groupId>
+            <artifactId>web-embed-alijsp</artifactId>
+            <version>${aliee.jsp.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.ee</groupId>
+            <artifactId>web-jdbc</artifactId>
+            <version>${aliee.jdbc.version}</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>javax.servlet</groupId>-->
+<!--            <artifactId>jstl</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>aliee-repository</id>
+            <name>EDAS AliEE Repository</name>
+            <url>https://edas-public.oss-cn-hangzhou.aliyuncs.com/repository</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: demo
+
+io:
+  cloudapp:
+    sequence:
+      snowflake:
+        enabled: true
+        workerId: 1
+        workerIdBits: 5
+        sequenceBits: 10
+      redis:
+        enabled: true
+        host: ${REDIS_HOST}
+
+

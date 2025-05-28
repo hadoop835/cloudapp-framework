@@ -1,0 +1,154 @@
+{
+  "Name": "SagaDemoMachine",
+  "Comment": "This state machine is modeled by designer tools.",
+  "Version": "0.0.5",
+  "StartState": "StockServiceTask",
+  "States": {
+    "StockServiceTask": {
+      "Name": "StockServiceTask",
+      "CompensateState": "StockCompensate",
+      "Input": [
+        "$.[businessKey]",
+        "$.[productCode]",
+        "$.[count]"
+      ],
+      "Output": {
+        "StockDebitResult": "$.#root"
+      },
+      "Status": {
+        "#root == true": "SU",
+        "#root == false": "FA",
+        "$Exception{java.lang.Throwable}": "UN"
+      },
+      "ServiceName": "stockService",
+      "ServiceMethod": "debit",
+      "Type": "ServiceTask",
+      "Next": "StockChoice",
+      "Catch": [
+        {
+          "Exceptions": [ "java.lang.Throwable" ],
+          "Next": "CompensationTrigger"
+        }
+      ]
+    },
+    "StockCompensate": {
+      "Name": "StockCompensate",
+      "Input": [
+        "$.[businessKey]"
+      ],
+      "ServiceName": "stockService",
+      "ServiceMethod": "compensate",
+      "Type": "ServiceTask"
+    },
+    "StockChoice": {
+      "Name": "StockChoice",
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Expression": "[StockDebitResult] == true",
+          "Next": "OrderServiceTask"
+        }
+      ],
+      "Default": "Fail"
+    },
+    "OrderServiceTask": {
+      "Name": "OrderServiceTask",
+      "CompensateState": "OrderCompensate",
+      "Input": [
+        "$.[businessKey]",
+        "$.[userId]",
+        "$.[productCode]",
+        "$.[count]"
+      ],
+      "Output": {
+        "CreateOrderResult": "$.#root"
+      },
+      "Status": {
+        "#root != null": "SU",
+        "#root == null": "FA",
+        "$Exception{java.lang.Throwable}": "UN"
+      },
+      "ServiceName": "orderService",
+      "ServiceMethod": "create",
+      "Catch": [
+        {
+          "Exceptions": [ "java.lang.Throwable" ],
+          "Next": "CompensationTrigger"
+        }
+      ],
+      "Type": "ServiceTask",
+      "Next": "OrderChoice"
+    },
+    "OrderCompensate": {
+      "Name": "OrderCompensate",
+      "Input": [
+        "$.[businessKey]"
+      ],
+      "ServiceName": "orderService",
+      "ServiceMethod": "compensate",
+      "Type": "ServiceTask"
+    },
+    "OrderChoice": {
+      "Name": "OrderChoice",
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Expression": "[CreateOrderResult] != null",
+          "Next": "AccountServiceTask"
+        }
+      ],
+      "Default": "Fail"
+    },
+    "AccountServiceTask": {
+      "Name": "AccountServiceTask",
+      "CompensateState": "AccountCompensate",
+      "Input": [
+        "$.[businessKey]",
+        "$.[userId]",
+        "$.[amount]"
+      ],
+      "Output": {
+        "DebitAccountResult": "$.#root"
+      },
+      "Status": {
+        "#root == true": "SU",
+        "#root == false": "FA",
+        "$Exception{java.lang.Throwable}": "UN"
+      },
+      "ServiceName": "accountService",
+      "ServiceMethod": "debit",
+      "Catch": [
+        {
+          "Exceptions": [ "java.lang.Throwable" ],
+          "Next": "CompensationTrigger"
+        }
+      ],
+      "Type": "ServiceTask",
+      "Next": "Succeed"
+    },
+    "AccountCompensate": {
+      "Name": "AccountCompensate",
+      "Input": [
+        "$.[businessKey]"
+      ],
+      "ServiceName": "accountService",
+      "ServiceMethod": "compensate",
+      "Type": "ServiceTask"
+    },
+    "Succeed": {
+      "Name": "Succeed",
+      "Type": "Succeed"
+    },
+    "CompensationTrigger": {
+      "Name": "CompensationTrigger",
+      "Type": "CompensationTrigger",
+      "Next": "Fail"
+    },
+    "Fail": {
+      "Name": "Fail",
+      "ErrorCode": "FAIL",
+      "Message": "Buy Fail",
+      "Type": "Fail"
+    }
+  }
+}

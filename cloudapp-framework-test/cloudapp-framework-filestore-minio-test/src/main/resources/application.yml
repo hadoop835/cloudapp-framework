@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: demo-minio
+
+
+io:
+  cloudapp:
+    filestore:
+      minio:
+        enabled: true
+        endpoint: ${MINIO_ENDPOINT}
+        accessKey: ${AK}
+        secretKey: ${SK}
+
+server:
+  port: 8080

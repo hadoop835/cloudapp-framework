@@ -1,0 +1,34 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: at-demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${host}:3306/at_test?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF8
+    username: ${username}
+    password: ${password}
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  main:
+    allow-circular-references: true
+
+io:
+  cloudapp:
+    seata:
+      enabled: true
+      application-id: ${spring.application.name}
+      tx-service-group: ${spring.application.name}-tx-group
+
+    observabilities:
+      ot:
+        enabled: true
+        metric-endpoint: ${endpoint}
+#logging:
+#  level:
+#    org: DEBUG

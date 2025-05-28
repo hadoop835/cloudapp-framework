@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: schedulerx2-worker-demo
+
+io:
+  cloudapp:
+    scheduler:
+      schedulerx2-worker:
+        enabled: true
+        #        Server-side
+        #        openapi-endpoint reference： https://help.aliyun.com/zh/schedulerx/schedulerx-serverless/developer-reference/api-schedulerx2-2019-04-30-endpoint?spm=a2c4g.11186623.0.0.626d313f2QVhID
+        openapi-endpoint: ${ENDPOINT}
+        #        AK
+        access-key-id: ${AK}
+        #        SK
+        access-key-secret: ${SK}
+        #        region-id reference： https://help.aliyun.com/zh/schedulerx/schedulerx-serverless/developer-reference/api-schedulerx2-2019-04-30-endpoint?spm=a2c4g.11186623.0.0.626d313f2QVhID
+        region-id: ${REGION}
+        #        Worker-side, reference: https://help.aliyun.com/zh/schedulerx/schedulerx-serverless/getting-started/connect-a-spring-boot-application-to-schedulerx?spm=a2c4g.11186623.help-menu-147760.d_1_2_0_2.2f7dcde2UXckTL#33e30668692ih
+        endpoint: ${WORKER_ENDPOINT}
+        namespace: ${NAMESPACE}
+        group-id: ${GROUP}
+        app-key: ${APPKEY}
+        # if it is a private cloud env, need it
+        domain-name: ${DOMAIN_NAME}

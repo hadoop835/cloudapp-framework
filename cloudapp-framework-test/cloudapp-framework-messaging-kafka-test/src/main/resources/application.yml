@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: KafkaDemo
+  profiles:
+    active:
+      - producer
+      - consumer
+
+server:
+  port: 8099

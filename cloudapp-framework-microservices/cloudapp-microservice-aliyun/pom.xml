@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.cloudapp.microservice</groupId>
+        <artifactId>cloudapp-framework-microservices</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>cloudapp-microservice-aliyun</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>cloudapp-microservice-dubbo-aliyun</module>
+        <module>cloudapp-microservice-springcloud-aliyun</module>
+        <module>cloudapp-microservice-aliyun-common</module>
+    </modules>
+
+    <dependencies>
+
+    </dependencies>
+</project>
