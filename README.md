@@ -1,123 +1,15 @@
-# 设计与使用说明
+# Design and Usage Guide
 
-# 设计目标
+#### [中文版](README_zh.md)
 
-CloudApp框架的目标是旨在设计一套通过统一的 SDK 封装云厂商的服务之后，解耦各个云厂商对应 PaaS 服务的编程差异，达到一套代码在不同厂商间灵活交付的效果。
+# Design Goals
+
+The goal of the CloudApp framework is to design a unified  SDK  that encapsulates cloud vendor services, decoupling the programming differences among various cloud vendors' PaaS services, thereby achieving flexible delivery across different vendors with a single codebase.
 
 ![alt text](README/assets/CloudApp.jpg)
 
-当前的应用维度的包组织结构如下，在一个应用构建的过程中，将包括通用的 starter 依赖与对应云产品功能的实现的依赖，如下所示：
+From an application perspective, the current package structure includes both general  starter  dependencies and implementation dependencies corresponding to specific cloud products during the application building process, as illustrated below:
 
-```plantuml
-@startuml 
+![alt text](README/assets/cloudapp-framework-uml.png)
 
-' 框架核心
-package "cloudapp-framework-core" {
-    package "spring-boot-starter-cloudapp" {}
-    package "cloudapp-base-utils" {}
-    package "cloudapp-base-api" {
-        package "api" {
-            package "cache" {}
-            package "config" {}
-            package "email" {}
-            package "filestore" {}
-            package "gateway" {}
-            package "messaging" {}
-            package "microservice" {}
-            package "oauth2" {}
-            package "observabilities" {}
-            package "scheduler" {}
-            package "search" {}
-            package "seate" {}
-            package "sequence" {}
-        }
-        package "exception" {}
-    }
-}
-
-' 平台服务
-package "cloudapp-framework-paas" {
-    package "cloudapp-spring-apigateway" {}
-    package "cloudapp-spring-config" {}
-    package "cloudapp-spring-filestore" {}
-    package "cloudapp-spring-messaging" {}
-    package "cloudapp-spring-redis" {}
-    package "cloudapp-spring-scheduler" {}
-    package "cloudapp-spring-search" {}
-    package "cloudapp-spring-aliee" {}
-}
-
-' 微服务
-package "cloudapp-framework-microservices" {
-    package "cloudapp-microservice-aliyun" {}
-}
-
-' 可观测
-package "cloudapp-framework-observabilities" {
-    package "cloudapp-observabilities-opentelemetry" {}
-}
-
-' 通用服务/工具
-package "cloudapp-framework-tools" {
-    package "cloudapp-datasource-druid" {}
-    package "cloudapp-spring-mail" {}
-    package "cloudapp-spring-oauth2" {}
-    package "cloudapp-spring-seata" {}
-    package "cloudapp-spring-sequence" {}
-}
-
-package application #Green {} 
-
-"cloudapp-base-api" <-[dashed]- "cloudapp-framework-paas" : implements
-"cloudapp-base-api" <-[dashed]- "cloudapp-framework-microservices" : implements
-"cloudapp-base-api" <-[dashed]- "cloudapp-framework-observabilities" : implements
-"cloudapp-base-api" <-[dashed]- "cloudapp-framework-tools" : implements
-
-"cloudapp-base-utils" <-[dashed]- application : uses
-"spring-boot-starter-cloudapp" <-[dashed]- application : uses
-"cloudapp-framework-paas" <-[dashed]- application : uses
-"cloudapp-framework-microservices" <-[dashed]- application : uses
-"cloudapp-framework-observabilities" <-[dashed]- application : uses
-"cloudapp-framework-tools" <-[dashed]- application : uses
-
-@enduml
-
-```
-
-在框架统一的 SDK 实现中，包括：分布式对象存储、分布式消息、分布式缓存、分布式配置等平台服务，也包括：全局序列、数据源等通用服务，还包括：微服务治理、可观测、应用服务器 aliee 和 AI 平台等。除了将 SDK 统一之外，框架还提供各服务的动态刷新与监控能力。此外，框架适配多版本 JDK、SpringBoot。
-
-设计与使用说明如下：
-
-[分布式对象存储设计与使用](README/分布式对象存储设计与使用.md)
-
-[分布式消息设计与使用](README/分布式消息设计与使用.md)
-
-[分布式缓存设计与使用](README/分布式缓存设计与使用.md)
-
-[分布式配置设计与使用](README/分布式配置设计与使用.md)
-
-[分布式搜索设计与使用](README/分布式搜索设计与使用.md)
-
-[服务网关设计与使用](README/服务网关设计与使用.md)
-
-[微服务治理设计与使用](README/微服务治理设计与使用.md)
-
-[可观测设计与使用](README/可观测设计与使用.md)
-
-[数据源设计与使用](README/数据源设计与使用.md)
-
-[线程池设计与使用](README/线程池设计与使用.md)
-
-[分布式任务设计与使用](README/分布式任务设计与使用.md)
-
-[OAuth2应用设计与使用](README/OAuth2应用设计与使用.md)
-
-[事务管理设计与使用](README/事务管理设计与使用.md)
-
-[邮件设计与使用](README/邮件设计与使用.md)
-
-[全局序列设计与使用](README/全局序列设计与使用.md)
-
-[工具类设计与使用](README/工具类设计与使用.md)
-
-[异常设计与使用](README/异常设计与使用.md)
+In the unified SDK implementation of the framework, there are platform services such as distributed object storage, distributed messaging, distributed caching, and distributed configuration. It also includes common services like global sequences and data sources, as well as microservice governance, observability, application server aliee, and AI platforms. In addition to unifying the SDK, the framework provides dynamic refresh and monitoring capabilities for each service. Moreover, the framework supports multiple JDK versions and Spring Boot.
