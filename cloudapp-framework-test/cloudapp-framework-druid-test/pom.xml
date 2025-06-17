@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>cloudapp-framework-test</artifactId>
-        <groupId>io.cloudapp</groupId>
+        <groupId>${groupId}</groupId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -16,12 +16,12 @@
     <dependencies>
 
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>cloudapp-datasource-druid</artifactId>
         </dependency>
 

@@ -73,4 +73,25 @@ public class EchoController {
             "\r\n\t\tProvider processed after sleep 1 second! Echo String: \"" + str + "\"" +
             "\r\n\t" + end + " Provider Return(host: " + NetUtil.getLocalIp() + ")";
     }
+
+
+    @RequestMapping(value = "/tag2")
+    public String tag2(){
+        long start = System.currentTimeMillis();
+
+        String currentTrafficLabel = trafficService.getCurrentTrafficLabel();
+
+        System.out.println("currentTrafficLabel tag is :" + currentTrafficLabel);
+        try {
+            TimeUnit.MILLISECONDS.sleep(appConfig.getTimeoutInMillis());
+        } catch (InterruptedException e) {
+        }
+
+
+
+//        boolean isCanary = trafficService.isDuringCanaryRelease();
+
+        long end = System.currentTimeMillis();
+        return "\r\n\t" + start + " Provider received (currentTrafficLabel?  " + currentTrafficLabel+ ")";
+    }
 }

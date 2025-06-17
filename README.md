@@ -1,6 +1,6 @@
 # Design and Usage Guide
 
-#### [中文版](README_zh.md)
+#### [中文版](README-zh)
 
 # Design Goals
 

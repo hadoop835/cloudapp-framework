@@ -65,7 +65,7 @@ public class GlobalJobMethodProcessor extends JavaProcessor {
         GlobalJobContext ctx = new GlobalJobContext(
                 context.getJobId(),
                 context.getJobParameters(),
-                context.getShardingId().intValue(),
+                context.getShardingId() == null ? 0 :context.getShardingId().intValue(),
                 context.getShardingNum(),
                 context.getShardingParameter()
         );

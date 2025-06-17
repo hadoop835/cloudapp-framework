@@ -5,18 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>io.cloudapp</groupId>
+        <groupId>${groupId}</groupId>
         <artifactId>cloudapp-framework-demos</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <groupId>io.cloudapp</groupId>
+    <groupId>${groupId}</groupId>
     <artifactId>cloudapp-datasource-druid-observable-demo</artifactId>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.cloudapp</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -32,7 +32,7 @@
         </dependency>
 
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>cloudapp-datasource-druid</artifactId>
         </dependency>
 
@@ -57,7 +57,7 @@
         </dependency>
 
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
             <exclusions>
                 <exclusion>
@@ -68,7 +68,7 @@
         </dependency>
 
         <dependency>
-            <groupId>io.cloudapp.microservice</groupId>
+            <groupId>${groupId}.microservice</groupId>
             <artifactId>cloudapp-microservice-springcloud-aliyun</artifactId>
             <exclusions>
                 <exclusion>
@@ -79,7 +79,7 @@
         </dependency>
 
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>cloudapp-observabilities-opentelemetry</artifactId>
             <exclusions>
                 <exclusion>

@@ -7,6 +7,8 @@
 
 package io.cloudapp.microservice.aliyun.demo;
 
+import io.cloudapp.api.microservice.TrafficService;
+import io.opentelemetry.context.Scope;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -20,6 +22,8 @@ public class DemoController {
     @Autowired
     private EchoService echoService;
 
+    @Autowired
+    private TrafficService trafficService;
 
     @RequestMapping(value = "/ping", method = RequestMethod.GET)
     public Boolean ping() {
@@ -28,6 +32,25 @@ public class DemoController {
 
             System.out.println("Service returned: " + pong);
             return pong.contains("ping");
+        } catch (Throwable t) {
+            t.printStackTrace();
+            return false;
+        }
+    }
+
+
+    @RequestMapping(value = "/tag2", method = RequestMethod.GET)
+    public Boolean tag() {
+        try {
+            try (Scope ignored = trafficService.withTrafficLabel("ok")) {
+                System.out.println("consumer tag is : " + trafficService.getCurrentTrafficLabel());
+
+                String pong = echoService.tag2();
+                System.out.println("Service returned: " + pong);
+                return pong.contains("ok");
+            }
+
+
         } catch (Throwable t) {
             t.printStackTrace();
             return false;

@@ -23,7 +23,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.cloudapp</groupId>
+        <groupId>${groupId}</groupId>
         <artifactId>cloudapp-seata-demo</artifactId>
         <version>${revision}</version>
     </parent>
@@ -34,7 +34,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.cloudapp</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <scope>import</scope>
                 <version>${revision}</version>
@@ -46,12 +46,12 @@
     <dependencies>
 
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>cloudapp-spring-seata</artifactId>
         </dependency>
 
@@ -66,7 +66,7 @@
         </dependency>
 
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>cloudapp-observabilities-opentelemetry</artifactId>
         </dependency>
 

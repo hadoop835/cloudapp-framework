@@ -110,7 +110,7 @@ oauth2应用实现的配置如下：
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>cloudapp-framework-dependencies</artifactId>
             <version>${revision}</version>
             <type>pom</type>
@@ -127,12 +127,12 @@ oauth2应用实现的配置如下：
     </dependency>
 
     <dependency>
-        <groupId>io.cloudapp</groupId>
+        <groupId>${groupId}</groupId>
         <artifactId>spring-boot-starter-cloudapp</artifactId>
     </dependency>
 
     <dependency>
-        <groupId>io.cloudapp</groupId>
+        <groupId>${groupId}</groupId>
         <artifactId>cloudapp-spring-oauth2</artifactId>
     </dependency>
 

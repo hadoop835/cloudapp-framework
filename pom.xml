@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>io.cloudapp</groupId>
+    <groupId>${groupId}</groupId>
     <artifactId>cloudapp-framework</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
@@ -26,8 +26,20 @@
         </license>
     </licenses>
 
+    <scm>
+        <url>https://github.com/alibaba/cloudapp-framework</url>
+        <connection>
+            scm:git:git://github.com/alibaba/cloudapp-framework.git
+        </connection>
+        <developerConnection>
+            scm:git:ssh://git@github.com/alibaba/cloudapp-framework.git
+        </developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <properties>
         <revision>1.0.3-SNAPSHOT</revision>
+        <groupId>com.alibaba.cloudapp</groupId>
 
         <spring-boot.version>2.7.18</spring-boot.version>
         <spring-framework.version>5.3.31</spring-framework.version>
@@ -61,7 +73,7 @@
             </dependency>
 
             <dependency>
-                <groupId>io.cloudapp</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -254,7 +266,6 @@
             </plugins>
         </pluginManagement>
 
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -295,7 +306,6 @@
                 </executions>
             </plugin>
 
-            <!--            带上源码好断点-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -311,5 +321,68 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven-source-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${maven-javadoc-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven-gpg-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>sonatype-nexus-snapshots</id>
+                    <name>Sonatype Nexus Snapshots</name>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>sonatype-nexus-staging</id>
+                    <name>Nexus Release Repository</name>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 
 </project>

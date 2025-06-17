@@ -18,4 +18,8 @@ public interface EchoService {
 
     @RequestMapping(value = "/echo/{str}",method = RequestMethod.GET)
     String echo(@PathVariable("str") String str, @RequestParam("env") String env);
+
+    @RequestMapping(value = "/tag2",method = RequestMethod.GET)
+    String tag2();
+
 }

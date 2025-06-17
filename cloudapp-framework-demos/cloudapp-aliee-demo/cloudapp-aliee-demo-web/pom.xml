@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.cloudapp</groupId>
+        <groupId>${groupId}</groupId>
         <artifactId>cloudapp-aliee-demo</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -15,7 +15,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.cloudapp</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -32,13 +32,13 @@
 
 
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
 
         <!--    -->
         <dependency>
-            <groupId>io.cloudapp.microservice</groupId>
+            <groupId>${groupId}.microservice</groupId>
             <artifactId>cloudapp-microservice-springcloud-aliyun</artifactId>
         </dependency>
 
@@ -53,11 +53,25 @@
 
         <!--    AliEE -->
         <dependency>
-            <groupId>io.cloudapp</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>cloudapp-starter-aliee</artifactId>
         </dependency>
 
 
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>aliee-repository</id>
+            <name>EDAS AliEE Repository</name>
+            <url>https://edas-public.oss-cn-hangzhou.aliyuncs.com/repository</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>
