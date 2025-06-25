@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>${groupId}</groupId>
+        <groupId>${cloudapp.groupId}</groupId>
         <artifactId>cloudapp-framework</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>

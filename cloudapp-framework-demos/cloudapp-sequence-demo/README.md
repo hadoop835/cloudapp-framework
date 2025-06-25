@@ -35,13 +35,13 @@ dependency to dependencies in project's pom file.
 ```xml
 <dependencies>
     <dependency>
-        <groupId>${groupId}</groupId>
+        <groupId>${cloudapp.groupId}</groupId>
         <artifactId>spring-boot-starter-cloudapp</artifactId>
         <version>${version number}</version>
     </dependency>
     
     <dependency>
-        <groupId>${groupId}</groupId>
+        <groupId>${cloudapp.groupId}</groupId>
         <artifactId>cloudapp-spring-sequence</artifactId>
         <version>${version number}</version>
     </dependency>

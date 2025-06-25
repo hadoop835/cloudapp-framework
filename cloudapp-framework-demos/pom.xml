@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>${groupId}</groupId>
+    <groupId>${cloudapp.groupId}</groupId>
     <artifactId>cloudapp-framework-demos</artifactId>
     <version>${revision}</version>
 
@@ -20,7 +20,7 @@
 
     <properties>
         <revision>1.0.3-SNAPSHOT</revision>
-        <groupId>com.alibaba.cloudapp</groupId>
+        <cloudapp.groupId>com.alibaba.cloudapp</cloudapp.groupId>
 
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.compilerVersion>8</maven.compiler.compilerVersion>

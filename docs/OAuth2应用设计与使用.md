@@ -83,7 +83,7 @@ package "cloudapp-base-api" {
 oauth2应用实现的配置如下：
 
 
-1.  定义 oauth2 自动配置参数类 _**OAuth2ClientProperties**_ ，继承类 _**io.cloudapp.model.OAuth2Client**_ ，使用注解 _**@ConfigurationProperties(prefix = OAuth2Component.BINDING\_PROP\_KEY)**_ ， _**OAuth2Component.BINDING\_PROP\_KEY=io.cloudapp.oauth2**_ ，其中字段如下：
+1.  定义 oauth2 自动配置参数类 _**OAuth2ClientProperties**_ ，继承类 _**model.com.alibaba.cloudapp.OAuth2Client**_ ，使用注解 _**@ConfigurationProperties(prefix = OAuth2Component.BINDING\_PROP\_KEY)**_ ， _**OAuth2Component.BINDING\_PROP\_KEY=com.alibaba.cloudapp.oauth2**_ ，其中字段如下：
     
 
 |  **字段名**  |  **数据类型**  |  **默认值**  |  **备注**  |
@@ -110,7 +110,7 @@ oauth2应用实现的配置如下：
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${cloudapp.groupId}</groupId>
             <artifactId>cloudapp-framework-dependencies</artifactId>
             <version>${revision}</version>
             <type>pom</type>
@@ -127,12 +127,12 @@ oauth2应用实现的配置如下：
     </dependency>
 
     <dependency>
-        <groupId>${groupId}</groupId>
+        <groupId>${cloudapp.groupId}</groupId>
         <artifactId>spring-boot-starter-cloudapp</artifactId>
     </dependency>
 
     <dependency>
-        <groupId>${groupId}</groupId>
+        <groupId>${cloudapp.groupId}</groupId>
         <artifactId>cloudapp-spring-oauth2</artifactId>
     </dependency>
 

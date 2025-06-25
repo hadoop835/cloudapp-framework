@@ -17,7 +17,7 @@ dubbo:
   config-center:
     address: # configuration center
   scan:
-    base-packages: io.cloudapp.microservice.aliyun.demo
+    base-packages: com.alibaba.cloudapp.microservice.aliyun.demo
 
 spring:
   cloud:

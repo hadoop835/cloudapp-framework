@@ -1,37 +1,37 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.cloudapp.starter.base.configuration.BaseAutoConfiguration,\
-io.cloudapp.starter.base.configuration.MonitoringThreadPoolConfiguration,\
-io.cloudapp.starter.sequence.configuration.SnowflakeSequenceAutoConfiguration,\
-io.cloudapp.starter.sequence.configuration.RedisSequenceAutoConfiguration,\
-io.cloudapp.starter.filestore.configuration.AliyunFileStoreConfiguration,\
-io.cloudapp.starter.filestore.configuration.MinioFileStoreConfiguration,\
-io.cloudapp.starter.apigateway.configuration.ApiGatewayConfiguration,\
-io.cloudapp.starter.messaging.configuration.CloudAppRocketConfiguration,\
-io.cloudapp.starter.messaging.configuration.CloudAppKafkaConfiguration,\
-io.cloudapp.starter.search.configuration.ElasticsearchConfiguration,\
-io.cloudapp.starter.redis.configuration.CloudAppRedisConfiguration,\
-io.cloudapp.starter.config.configuration.NacosConfigReadServiceAutoConfiguration,\
-io.cloudapp.starter.config.configuration.AliyunConfigManagerAutoConfiguration,\
-io.cloudapp.starter.microservice.configuration.AliyunMicroServiceConfiguration,\
-io.cloudapp.starter.oauth2.configuration.OAuth2AutoConfiguration, \
-io.cloudapp.starter.datasource.configurations.RefreshableDruidDataSourceAutoConfigure, \
-io.cloudapp.starter.oauth2.configuration.OAuth2AutoConfiguration,\
-io.cloudapp.starter.observabilities.configurations.OpenTelemetryMetricConfiguration,\
-io.cloudapp.starter.seata.configuration.CloudAppSeataAutoConfiguration,\
-io.cloudapp.starter.seata.configuration.CloudAppSagaAutoConfiguration,\
-io.cloudapp.starter.seata.configuration.SeataObservableConfiguration,\
-io.cloudapp.starter.scheduler.configuration.SchedulerX2ServerConfiguration,\
-io.cloudapp.starter.scheduler.configuration.SchedulerX2WorkerConfiguration,\
-io.cloudapp.starter.observabilities.configurations.OpenTelemetryTraceConfiguration,\
-io.cloudapp.starter.observabilities.configurations.OpenTelemetryLog4J2AutoConfiguration,\
-io.cloudapp.starter.mail.configuration.CloudAppMailAutoConfiguration
+com.alibaba.cloudapp.starter.base.configuration.BaseAutoConfiguration,\
+com.alibaba.cloudapp.starter.base.configuration.MonitoringThreadPoolConfiguration,\
+com.alibaba.cloudapp.starter.sequence.configuration.SnowflakeSequenceAutoConfiguration,\
+com.alibaba.cloudapp.starter.sequence.configuration.RedisSequenceAutoConfiguration,\
+com.alibaba.cloudapp.starter.filestore.configuration.AliyunFileStoreConfiguration,\
+com.alibaba.cloudapp.starter.filestore.configuration.MinioFileStoreConfiguration,\
+com.alibaba.cloudapp.starter.apigateway.configuration.ApiGatewayConfiguration,\
+com.alibaba.cloudapp.starter.messaging.configuration.CloudAppRocketConfiguration,\
+com.alibaba.cloudapp.starter.messaging.configuration.CloudAppKafkaConfiguration,\
+com.alibaba.cloudapp.starter.search.configuration.ElasticsearchConfiguration,\
+com.alibaba.cloudapp.starter.redis.configuration.CloudAppRedisConfiguration,\
+com.alibaba.cloudapp.starter.config.configuration.NacosConfigReadServiceAutoConfiguration,\
+com.alibaba.cloudapp.starter.config.configuration.AliyunConfigManagerAutoConfiguration,\
+com.alibaba.cloudapp.starter.microservice.configuration.AliyunMicroServiceConfiguration,\
+com.alibaba.cloudapp.starter.oauth2.configuration.OAuth2AutoConfiguration, \
+com.alibaba.cloudapp.starter.datasource.configurations.RefreshableDruidDataSourceAutoConfigure, \
+com.alibaba.cloudapp.starter.oauth2.configuration.OAuth2AutoConfiguration,\
+com.alibaba.cloudapp.starter.observabilities.configurations.OpenTelemetryMetricConfiguration,\
+com.alibaba.cloudapp.starter.seata.configuration.CloudAppSeataAutoConfiguration,\
+com.alibaba.cloudapp.starter.seata.configuration.CloudAppSagaAutoConfiguration,\
+com.alibaba.cloudapp.starter.seata.configuration.SeataObservableConfiguration,\
+com.alibaba.cloudapp.starter.scheduler.configuration.SchedulerX2ServerConfiguration,\
+com.alibaba.cloudapp.starter.scheduler.configuration.SchedulerX2WorkerConfiguration,\
+com.alibaba.cloudapp.starter.observabilities.configurations.OpenTelemetryTraceConfiguration,\
+com.alibaba.cloudapp.starter.observabilities.configurations.OpenTelemetryLog4J2AutoConfiguration,\
+com.alibaba.cloudapp.starter.mail.configuration.CloudAppMailAutoConfiguration
 
 org.springframework.context.ApplicationContextInitializer=\
-io.cloudapp.starter.mail.configuration.MailApplicationInitializer
+com.alibaba.cloudapp.starter.mail.configuration.MailApplicationInitializer
 
 
 org.springframework.context.ApplicationListener=\
-    io.cloudapp.starter.base.CloudAppContextInitialized
+    com.alibaba.cloudapp.starter.base.CloudAppContextInitialized
 
 org.springframework.boot.env.EnvironmentPostProcessor=\
-io.cloudapp.starter.observabilities.configurations.OpenTelemetryLoggingPostProcessor
+com.alibaba.cloudapp.starter.observabilities.configurations.OpenTelemetryLoggingPostProcessor

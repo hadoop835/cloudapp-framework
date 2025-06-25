@@ -17,10 +17,11 @@
  *
  */
 
-package io.cloudapp.microservice.aliyun;
+package com.alibaba.cloudapp.microservice.aliyun;
 
 import com.alibaba.cloud.nacos.registry.NacosRegistration;
-import io.cloudapp.util.FileUtils;
+import com.alibaba.cloudapp.microservice.aliyun.AliyunTrafficService;
+import com.alibaba.cloudapp.util.FileUtils;
 import io.opentelemetry.context.Scope;
 import org.junit.Assert;
 import org.junit.Test;

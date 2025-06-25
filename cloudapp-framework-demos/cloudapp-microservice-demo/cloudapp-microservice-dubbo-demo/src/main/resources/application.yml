@@ -11,7 +11,7 @@ dubbo:
   config-center:
     address: nacos://127.0.0.1:8848
   scan:
-    base-packages: io.cloudapp.microservice.aliyun.demo
+    base-packages: com.alibaba.cloudapp.microservice.aliyun.demo
 
 spring:
   cloud:

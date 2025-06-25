@@ -5,19 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>${groupId}</groupId>
+        <groupId>${cloudapp.groupId}</groupId>
         <artifactId>cloudapp-framework-test</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <groupId>${groupId}</groupId>
+    <groupId>${cloudapp.groupId}</groupId>
     <artifactId>cloudapp-framework-redis-test</artifactId>
     <version>${revision}</version>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -34,7 +34,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${cloudapp.groupId}</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
 
@@ -45,7 +45,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${cloudapp.groupId}</groupId>
             <artifactId>cloudapp-spring-redis</artifactId>
         </dependency>
 

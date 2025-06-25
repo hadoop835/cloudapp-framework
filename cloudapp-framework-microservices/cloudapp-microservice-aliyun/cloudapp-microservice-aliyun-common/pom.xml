@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>${groupId}.microservice</groupId>
+        <groupId>${cloudapp.groupId}.microservice</groupId>
         <artifactId>cloudapp-microservice-aliyun</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -21,11 +21,11 @@
         </dependency>
 
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${cloudapp.groupId}</groupId>
             <artifactId>cloudapp-base-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${cloudapp.groupId}</groupId>
             <artifactId>cloudapp-base-utils</artifactId>
         </dependency>
         <dependency>

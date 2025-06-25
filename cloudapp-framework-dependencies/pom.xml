@@ -9,7 +9,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>${groupId}</groupId>
+    <groupId>${cloudapp.groupId}</groupId>
     <artifactId>cloudapp-framework-dependencies</artifactId>
     <packaging>pom</packaging>
     <version>${revision}</version>
@@ -17,7 +17,7 @@
     <name>cloudapp-framework-dependencies</name>
 
     <properties>
-        <groupId>com.alibaba.cloudapp</groupId>
+        <cloudapp.groupId>com.alibaba.cloudapp</cloudapp.groupId>
         <revision>1.0.3-SNAPSHOT</revision>
 
         <spring-boot.version>2.7.18</spring-boot.version>
@@ -131,191 +131,191 @@
 
             <!-- ========================= cloudapp framework ============================ -->
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-base-api</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-base-utils</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-redis</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-sequence</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-amqp</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-search</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-search-elasticsearch</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-scheduler-schedulerx2-server</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-scheduler-schedulerx2-worker</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-seata</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-mail</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-filestore</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-filestore-aliyun</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-filestore-huawei</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-filestore-minio</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-apigateway-aliyun</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-config</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-datasource-druid</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-api-gateway</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-scheduler</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>spring-boot-starter-cloudapp</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}.microservice</groupId>
+                <groupId>${cloudapp.groupId}.microservice</groupId>
                 <artifactId>cloudapp-microservice-springcloud-aliyun</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <groupId>${groupId}.microservice</groupId>
+                <groupId>${cloudapp.groupId}.microservice</groupId>
                 <artifactId>cloudapp-microservice-dubbo-aliyun</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <groupId>${groupId}.microservice</groupId>
+                <groupId>${cloudapp.groupId}.microservice</groupId>
                 <artifactId>cloudapp-microservice-aliyun-common</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-starter-aliee</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-observabilities-opentelemetry</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-messaging-rabbitmq</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-messaging-kafka</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-messaging-rocketmq</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-config-aliyun</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}.microservice</groupId>
+                <groupId>${cloudapp.groupId}.microservice</groupId>
                 <artifactId>cloudapp-microservice-aliyun</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-spring-oauth2</artifactId>
                 <version>${revision}</version>
             </dependency>

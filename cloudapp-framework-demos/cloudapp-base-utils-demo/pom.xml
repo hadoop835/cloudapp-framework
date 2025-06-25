@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>${groupId}</groupId>
+        <groupId>${cloudapp.groupId}</groupId>
         <artifactId>cloudapp-framework-demos</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>${groupId}</groupId>
+    <groupId>${cloudapp.groupId}</groupId>
     <artifactId>cloudapp-base-utils-demo</artifactId>
     <name>cloudapp-base-utils-demo</name>
     <packaging>jar</packaging>
@@ -19,7 +19,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -36,7 +36,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${cloudapp.groupId}</groupId>
             <artifactId>cloudapp-base-utils</artifactId>
         </dependency>
 

@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>${groupId}</groupId>
+    <groupId>${cloudapp.groupId}</groupId>
     <artifactId>cloudapp-framework</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
@@ -39,7 +39,7 @@
 
     <properties>
         <revision>1.0.3-SNAPSHOT</revision>
-        <groupId>com.alibaba.cloudapp</groupId>
+        <cloudapp.groupId>com.alibaba.cloudapp</cloudapp.groupId>
 
         <spring-boot.version>2.7.18</spring-boot.version>
         <spring-framework.version>5.3.31</spring-framework.version>
@@ -73,7 +73,7 @@
             </dependency>
 
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${cloudapp.groupId}</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
