@@ -5,19 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>${cloudapp.groupId}</groupId>
+        <groupId>com.alibaba.cloudapp</groupId>
         <artifactId>cloudapp-framework-test</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <groupId>${cloudapp.groupId}</groupId>
+    <groupId>com.alibaba.cloudapp</groupId>
     <artifactId>cloudapp-framework-elasticsearch-test</artifactId>
     <version>${revision}</version>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${cloudapp.groupId}</groupId>
+                <groupId>com.alibaba.cloudapp</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -34,12 +34,12 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-search-elasticsearch</artifactId>
             <exclusions>
                 <exclusion>

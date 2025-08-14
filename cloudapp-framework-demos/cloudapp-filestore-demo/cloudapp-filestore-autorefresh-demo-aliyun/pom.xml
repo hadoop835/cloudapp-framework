@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>${cloudapp.groupId}</groupId>
+        <groupId>com.alibaba.cloudapp</groupId>
         <artifactId>cloudapp-filestore-demo</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -16,7 +16,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${cloudapp.groupId}</groupId>
+                <groupId>com.alibaba.cloudapp</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -33,12 +33,12 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-filestore-aliyun</artifactId>
         </dependency>
 

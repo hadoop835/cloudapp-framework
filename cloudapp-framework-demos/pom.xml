@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>${cloudapp.groupId}</groupId>
+    <groupId>com.alibaba.cloudapp</groupId>
     <artifactId>cloudapp-framework-demos</artifactId>
     <version>${revision}</version>
 

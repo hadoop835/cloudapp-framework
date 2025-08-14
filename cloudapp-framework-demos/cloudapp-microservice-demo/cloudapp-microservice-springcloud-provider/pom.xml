@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>${cloudapp.groupId}</groupId>
+        <groupId>com.alibaba.cloudapp</groupId>
         <artifactId>cloudapp-microservice-demo</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -15,11 +15,11 @@
 
     <dependencies>
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
         <dependency>
-            <groupId>${cloudapp.groupId}.microservice</groupId>
+            <groupId>com.alibaba.cloudapp.microservice</groupId>
             <artifactId>cloudapp-microservice-springcloud-aliyun</artifactId>
         </dependency>
         <dependency>

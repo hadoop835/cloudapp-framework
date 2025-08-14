@@ -110,7 +110,7 @@ oauth2应用实现的配置如下：
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-framework-dependencies</artifactId>
             <version>${revision}</version>
             <type>pom</type>
@@ -127,12 +127,12 @@ oauth2应用实现的配置如下：
     </dependency>
 
     <dependency>
-        <groupId>${cloudapp.groupId}</groupId>
+        <groupId>com.alibaba.cloudapp</groupId>
         <artifactId>spring-boot-starter-cloudapp</artifactId>
     </dependency>
 
     <dependency>
-        <groupId>${cloudapp.groupId}</groupId>
+        <groupId>com.alibaba.cloudapp</groupId>
         <artifactId>cloudapp-spring-oauth2</artifactId>
     </dependency>
 

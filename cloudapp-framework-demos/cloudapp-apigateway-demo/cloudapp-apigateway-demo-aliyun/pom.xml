@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>cloudapp-apigateway-demo</artifactId>
-        <groupId>${cloudapp.groupId}</groupId>
+        <groupId>com.alibaba.cloudapp</groupId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -19,7 +19,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${cloudapp.groupId}</groupId>
+                <groupId>com.alibaba.cloudapp</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -35,7 +35,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
 
@@ -45,7 +45,7 @@
          </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-apigateway-aliyun</artifactId>
         </dependency>
 

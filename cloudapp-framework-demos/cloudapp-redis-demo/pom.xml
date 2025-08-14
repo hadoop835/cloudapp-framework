@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>${cloudapp.groupId}</groupId>
+        <groupId>com.alibaba.cloudapp</groupId>
         <artifactId>cloudapp-framework-demos</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
@@ -20,7 +20,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${cloudapp.groupId}</groupId>
+                <groupId>com.alibaba.cloudapp</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -37,12 +37,12 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-redis</artifactId>
         </dependency>
 

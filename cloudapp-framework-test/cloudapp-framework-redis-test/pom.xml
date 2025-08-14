@@ -5,19 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>${cloudapp.groupId}</groupId>
+        <groupId>com.alibaba.cloudapp</groupId>
         <artifactId>cloudapp-framework-test</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <groupId>${cloudapp.groupId}</groupId>
+    <groupId>com.alibaba.cloudapp</groupId>
     <artifactId>cloudapp-framework-redis-test</artifactId>
     <version>${revision}</version>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${cloudapp.groupId}</groupId>
+                <groupId>com.alibaba.cloudapp</groupId>
                 <artifactId>cloudapp-framework-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
@@ -34,7 +34,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>spring-boot-starter-cloudapp</artifactId>
         </dependency>
 
@@ -45,7 +45,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-redis</artifactId>
         </dependency>
 

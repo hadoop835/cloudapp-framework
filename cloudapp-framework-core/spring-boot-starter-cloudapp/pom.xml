@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>${cloudapp.groupId}</groupId>
+        <groupId>com.alibaba.cloudapp</groupId>
         <artifactId>cloudapp-framework-core</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -17,12 +17,12 @@
     <dependencies>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-base-utils</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-base-api</artifactId>
         </dependency>
 
@@ -55,13 +55,13 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-redis</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-mail</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -73,7 +73,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-sequence</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -103,80 +103,80 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-filestore-aliyun</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-filestore-minio</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-apigateway-aliyun</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-messaging-rocketmq</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-messaging-kafka</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-search-elasticsearch</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-seata</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-scheduler-schedulerx2-server</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-scheduler-schedulerx2-worker</artifactId>
             <scope>provided</scope>
         </dependency>
 
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-config-aliyun</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}.microservice</groupId>
+            <groupId>com.alibaba.cloudapp.microservice</groupId>
             <artifactId>cloudapp-microservice-springcloud-aliyun</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}.microservice</groupId>
+            <groupId>com.alibaba.cloudapp.microservice</groupId>
             <artifactId>cloudapp-microservice-dubbo-aliyun</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-datasource-druid</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -194,7 +194,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-spring-oauth2</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -206,7 +206,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${cloudapp.groupId}</groupId>
+            <groupId>com.alibaba.cloudapp</groupId>
             <artifactId>cloudapp-observabilities-opentelemetry</artifactId>
             <scope>provided</scope>
         </dependency>
