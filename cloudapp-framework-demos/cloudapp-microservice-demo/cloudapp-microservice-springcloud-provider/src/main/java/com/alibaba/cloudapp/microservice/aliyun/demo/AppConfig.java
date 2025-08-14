@@ -13,7 +13,9 @@ public class AppConfig {
 
     @Value("${application.app.label:unknown}")
     private String label = "unknown";
-
+    
+    @Value("${application.app.healthy:true}")
+    private String healthy = "true";
 
     public int getTimeoutInMillis() {
         return timeoutInMillis;
@@ -29,5 +31,13 @@ public class AppConfig {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+    
+    public String isHealthy() {
+        return healthy;
+    }
+    
+    public void setHealthy(String healthy) {
+        this.healthy = healthy;
     }
 }

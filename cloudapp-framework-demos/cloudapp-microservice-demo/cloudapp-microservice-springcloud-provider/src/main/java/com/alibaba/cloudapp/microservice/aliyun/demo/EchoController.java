@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.concurrent.TimeUnit;
 
 @RestController
@@ -94,4 +95,27 @@ public class EchoController {
         long end = System.currentTimeMillis();
         return "\r\n\t" + start + " Provider received (currentTrafficLabel?  " + currentTrafficLabel+ ")";
     }
+    
+    @RequestMapping("/address")
+    public String address(HttpServletRequest request) {
+        return "Provider(" + request.getLocalAddr() + ")";
+    }
+    
+    @RequestMapping("/online")
+    public String online() {
+        appConfig.setHealthy("true");
+        return "Online!";
+    }
+    
+    @RequestMapping("/offline")
+    public String offline() {
+        appConfig.setHealthy("false");
+        return "Offline!";
+    }
+    
+    @RequestMapping("/healthCheck")
+    public String healthCheck() {
+        return appConfig.isHealthy();
+    }
+    
 }
