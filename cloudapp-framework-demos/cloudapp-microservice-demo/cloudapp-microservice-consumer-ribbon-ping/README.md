@@ -46,3 +46,18 @@
 
 ### 客户端
 - GET /address : 调用服务 /address 接口。
+
+## 示例效果
+
+### 步骤一：部署Demo provider 和 consumer，并访问应用
+客户端、服务端（2副本）正常部署并启动后，登录客户端实例访问服务端接口，可以看到流量在服务端的两台实例中轮询访问。
+![alt text](../../../docs/assets/ribbon-ping-demo1.png)
+
+### 步骤二：模拟服务端实例下线
+登录服务端其中一台实例执行http://127.0.0.1/offline ，手工触发变更/healthCheck返回值，并等待30s后，观察客户端访问流量状态。
+![alt text](../../../docs/assets/ribbon-ping-demo2.png)
+
+### 步骤三：模拟服务端实例恢复
+登录步骤2的实例中，执行http://127.0.0.1/online ，变更/healthCheck返回值，并等待30s后，观察客户端访问流量的状态恢复为轮询访问。
+![alt text](../../../docs/assets/ribbon-ping-demo3.png)
+
