@@ -11,12 +11,14 @@ Common operations within the distributed object storage service are defined in t
 
 # Scenario
 
+
 | **Feature**       | **Function/Case**                                                                    | **OSS support**                 | **OSS demo support**             | **Minio support**               | **MinIO demo support**          |
 |:------------------|:-------------------------------------------------------------------------------------|---------------------------------|----------------------------------|---------------------------------|---------------------------------|
 | Core              | automatic configuration                                                              | <input type="checkbox" checked> | <input type="checkbox" checked>  | <input type="checkbox" checked> | <input type="checkbox" checked> |
 |                   | dynamic configuration                                                                | <input type="checkbox" checked> | <input type="checkbox" checked>  | <input type="checkbox" checked> | -                               |
 | Object Management | upload/download/update/delete object                                                 | <input type="checkbox" checked> | <input type="checkbox" checked>  | <input type="checkbox" checked> | <input type="checkbox" checked> |
-|                   | copy/restore object                                                                  | <input type="checkbox" checked> | <input type="checkbox" checked>  | <input type="checkbox" checked> | <input type="checkbox" checked> |
+|                   | copy object                                                                          | <input type="checkbox" checked> | <input type="checkbox" checked>  | <input type="checkbox" checked> | <input type="checkbox" checked> |
+|                   | restore object                                                                       | <input type="checkbox" checked> | <input type="checkbox" checked>  | -                               | -                               |
 |                   | multipart upload                                                                     | <input type="checkbox" checked> | <input type="checkbox" checked>  | <input type="checkbox" checked> | <input type="checkbox" checked> |
 | Bucket Management | create/delete/get bucket                                                             | <input type="checkbox" checked> | <input type="checkbox" checked>  | <input type="checkbox" checked> | <input type="checkbox" checked> |
 |                   | list object                                                                          | <input type="checkbox" checked> | <input type="checkbox" checked>  | <input type="checkbox" checked> | <input type="checkbox" checked> |
