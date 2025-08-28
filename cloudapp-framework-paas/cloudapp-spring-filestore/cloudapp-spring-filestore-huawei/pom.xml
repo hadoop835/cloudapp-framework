@@ -9,6 +9,7 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+    <name>cloudapp-spring-filestore-huawei</name>
     <artifactId>cloudapp-spring-filestore-huawei</artifactId>
     <version>${revision}</version>
 

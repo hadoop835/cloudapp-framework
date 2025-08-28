@@ -16,7 +16,7 @@
     </properties>
 
     <groupId>com.alibaba.cloudapp</groupId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <artifactId>cloudapp-microservice-consumer-ribbon-ping</artifactId>
     <name>cloudapp-microservice-consumer-ribbon-ping</name>
     <description>cloudapp-microservice-consumer-ribbon-ping</description>

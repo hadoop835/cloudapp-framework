@@ -9,7 +9,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <name>cloudapp-spring-sequence</name>
     <artifactId>cloudapp-spring-sequence</artifactId>
     <version>${revision}</version>
 

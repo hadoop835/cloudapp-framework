@@ -10,7 +10,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-
+    <name>cloudapp-base-api</name>
     <artifactId>cloudapp-base-api</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>

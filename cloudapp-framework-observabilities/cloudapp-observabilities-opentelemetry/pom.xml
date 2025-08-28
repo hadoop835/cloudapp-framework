@@ -9,7 +9,7 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
+    <name>cloudapp-observabilities-opentelemetry</name>
     <artifactId>cloudapp-observabilities-opentelemetry</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>

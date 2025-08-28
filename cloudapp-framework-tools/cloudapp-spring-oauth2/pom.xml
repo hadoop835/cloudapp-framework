@@ -7,7 +7,6 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
     <artifactId>cloudapp-spring-oauth2</artifactId>
     <packaging>jar</packaging>
     <version>${revision}</version>

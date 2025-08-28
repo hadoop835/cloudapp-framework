@@ -9,7 +9,7 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
+    <name>cloudapp-framework-paas</name>
     <artifactId>cloudapp-framework-paas</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>

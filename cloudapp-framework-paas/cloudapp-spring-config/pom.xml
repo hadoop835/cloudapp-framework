@@ -9,7 +9,7 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
+    <name>cloudapp-spring-config</name>
     <artifactId>cloudapp-spring-config</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>

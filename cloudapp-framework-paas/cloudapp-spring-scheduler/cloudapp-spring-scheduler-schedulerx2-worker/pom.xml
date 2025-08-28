@@ -7,7 +7,7 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
+    <name>cloudapp-spring-scheduler-schedulerx2-worker</name>
     <artifactId>cloudapp-spring-scheduler-schedulerx2-worker</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>

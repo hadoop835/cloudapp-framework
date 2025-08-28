@@ -38,7 +38,7 @@
     </scm>
 
     <properties>
-        <revision>1.0.3-SNAPSHOT</revision>
+        <revision>1.0.3</revision>
         <cloudapp.groupId>com.alibaba.cloudapp</cloudapp.groupId>
 
         <spring-boot.version>2.7.18</spring-boot.version>
@@ -50,8 +50,6 @@
         <maven.compiler.compilerVersion>8</maven.compiler.compilerVersion>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.javadoc.skip>true</maven.javadoc.skip>
-        <maven.source.skip>true</maven.source.skip>
     </properties>
 
     <dependencyManagement>
@@ -319,6 +317,18 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>sonatype-nexus-staging</publishingServerId>
+                    <centralBaseUrl>https://central.sonatype.com</centralBaseUrl>
+                    <autoPublish>true</autoPublish>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -374,12 +384,11 @@
                 <snapshotRepository>
                     <id>sonatype-nexus-snapshots</id>
                     <name>Sonatype Nexus Snapshots</name>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <url>https://central.sonatype.com/repository/maven-snapshots/</url>
                 </snapshotRepository>
                 <repository>
                     <id>sonatype-nexus-staging</id>
-                    <name>Nexus Release Repository</name>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                    <url>https://central.sonatype.com</url>
                 </repository>
             </distributionManagement>
         </profile>
