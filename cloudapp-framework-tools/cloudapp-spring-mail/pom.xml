@@ -9,6 +9,7 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+    <name>cloudapp-spring-mail</name>
     <artifactId>cloudapp-spring-mail</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>

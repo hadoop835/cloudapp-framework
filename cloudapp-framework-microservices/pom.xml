@@ -9,7 +9,7 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
+    <name>cloudapp-framework-microservices</name>
     <artifactId>cloudapp-framework-microservices</artifactId>
     <groupId>com.alibaba.cloudapp.microservice</groupId>
     <version>${revision}</version>

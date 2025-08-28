@@ -11,6 +11,7 @@
     </parent>
     <artifactId>cloudapp-base-utils</artifactId>
     <version>${revision}</version>
+    <name>cloudapp-base-utils</name>
 
     <dependencies>
         <dependency>

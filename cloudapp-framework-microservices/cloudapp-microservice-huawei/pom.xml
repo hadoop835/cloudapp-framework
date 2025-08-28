@@ -9,7 +9,7 @@
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
+    <name>cloudapp-microservice-huawei</name>
     <artifactId>cloudapp-microservice-huawei</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
