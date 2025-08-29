@@ -48,21 +48,6 @@ CloudApp Framework解决了云计算中厂商锁定的关键挑战，提供：
 - **邮件服务**：基于Freemarker和Thymeleaf的模板邮件
 - **任务调度**：分布式任务调度能力
 
-## ☁️ 支持的云服务提供商
-
-| 服务 | 阿里云 | 华为云 | MinIO | Kafka | RocketMQ | Redis | Elasticsearch |
-|------|--------|--------|-------|-------|----------|-------|--------------|
-| **对象存储** | ✅ OSS | ✅ OBS | ✅ | - | - | - | - |
-| **消息传递** | ✅ RocketMQ | 🔧 | - | ✅ | ✅ | - | - |
-| **缓存** | ✅ ApsaraDB for Redis | 🔧 | - | - | - | ✅ | - |
-| **配置管理** | ✅ ACM/Nacos | 🔧 | - | - | - | - | - |
-| **搜索** | ✅ Elasticsearch | 🔧 | - | - | - | - | ✅ |
-| **API网关** | ✅ API Gateway | 🔧 | - | - | - | - | - |
-| **微服务** | ✅ EDAS/Nacos | 🔧 | - | - | - | - | - |
-| **调度** | ✅ SchedulerX | 🔧 | - | - | - | - | - |
-
-*图例: ✅ 完全支持 | 🔧 开发中 | - 不适用*
-
 ## 🛠️ 支持的中间件和技术
 
 ### **消息传递**
@@ -222,26 +207,7 @@ mvn spring-boot:run
 - [工具类设计与使用](docs/工具类设计与使用.md)
 - [异常设计与使用](docs/异常设计与使用.md)
 
-## 🤝 贡献
-
-我们欢迎贡献！请阅读我们的[贡献指南](CONTRIBUTING.md)，了解我们的行为准则和提交拉取请求的流程。
 
 ## 📄 许可证
 
 本项目采用Apache License 2.0许可证 - 详情请参阅[LICENSE](LICENSE)文件。
-
-## 🔗 相关项目
-
-- [Spring Cloud Alibaba](https://github.com/alibaba/spring-cloud-alibaba)
-- [Spring Boot](https://github.com/spring-projects/spring-boot)
-- [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-java)
-
-## 📞 支持
-
-- 🐛 [问题反馈](https://github.com/alibaba/cloudapp-framework/issues)
-- 💬 [讨论](https://github.com/alibaba/cloudapp-framework/discussions)
-- 📧 [邮件支持](mailto:support@example.com)
-
----
-
-**由CloudApp Framework团队用❤️制作**

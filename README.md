@@ -48,20 +48,6 @@ The CloudApp Framework addresses the critical challenge of vendor lock-in in clo
 - **Email Services**: Template-based email with Freemarker and Thymeleaf
 - **Task Scheduling**: Distributed task scheduling capabilities
 
-## ☁️ Supported Cloud Providers
-
-| Service | Alibaba Cloud | Huawei Cloud | MinIO | Kafka | RocketMQ | Redis | Elasticsearch |
-|---------|---------------|--------------|-------|-------|----------|-------|--------------|
-| **Object Storage** | ✅ OSS | ✅ OBS | ✅ | - | - | - | - |
-| **Messaging** | ✅ RocketMQ | 🔧 | - | ✅ | ✅ | - | - |
-| **Caching** | ✅ ApsaraDB for Redis | 🔧 | - | - | - | ✅ | - |
-| **Configuration** | ✅ ACM/Nacos | 🔧 | - | - | - | - | - |
-| **Search** | ✅ Elasticsearch | 🔧 | - | - | - | - | ✅ |
-| **API Gateway** | ✅ API Gateway | 🔧 | - | - | - | - | - |
-| **Microservices** | ✅ EDAS/Nacos | 🔧 | - | - | - | - | - |
-| **Scheduling** | ✅ SchedulerX | 🔧 | - | - | - | - | - |
-
-*Legend: ✅ Fully Supported | 🔧 In Development | - Not Applicable*
 
 ## 🛠️ Supported Middleware & Technologies
 
@@ -214,26 +200,7 @@ Comprehensive documentation for each service:
 - [Observability Design & Usage](docs/可观测设计与使用.md)
 - [More Documentation...](README-zh.md)
 
-## 🤝 Contributing
-
-We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## 📄 License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-## 🔗 Related Projects
-
-- [Spring Cloud Alibaba](https://github.com/alibaba/spring-cloud-alibaba)
-- [Spring Boot](https://github.com/spring-projects/spring-boot)
-- [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-java)
-
-## 📞 Support
-
-- 🐛 [Issues](https://github.com/alibaba/cloudapp-framework/issues)
-- 💬 [Discussions](https://github.com/alibaba/cloudapp-framework/discussions)
-- 📧 [Email Support](mailto:support@example.com)
-
----
-
-**Made with ❤️ by the CloudApp Framework Team**
